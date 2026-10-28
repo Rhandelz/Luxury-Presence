@@ -32,7 +32,7 @@ const Nav = () => {
             href="/listings"
             className="text-[14px] text-white font-normal uppercase   "
           >
-            Let's Move
+            Lets Move
           </a>
           <a
             href="/listings"

@@ -2,6 +2,7 @@ import { Source_Sans_3, Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import "boxicons/css/boxicons.min.css";
+import Footer from "./components/Footer";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
