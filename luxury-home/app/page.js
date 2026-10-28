@@ -6,6 +6,9 @@ import vector from "@/image/Vector.png";
 import img1 from "@/image/img1.webp";
 import img2 from "@/image/img2.webp";
 import img3 from "@/image/img3.webp";
+import img4 from "@/image/img4.webp";
+import img5 from "@/image/img5.webp";
+import img6 from "@/image/img6.webp";
 
 export const cards = [
   {
@@ -146,8 +149,8 @@ export default function Home() {
         />
       </div>
 
-      {/* ABOUT SECTION  */}
-      <div className="w-full  bg-[#171717] pt-16">
+      {/* SOLD SECTION  */}
+      <div className="w-full  bg-[#171717] py-16">
         <div className="w-full flex flex-col gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
           {/* TITLE */}
           <div className="w-full flex flex-row ">
@@ -174,6 +177,68 @@ export default function Home() {
                 text={card.text}
               />
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* SERVICE SECTION  */}
+      <div className="w-full pt-16">
+        <div className="w-full flex flex-col gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
+          {/* TITLE */}
+          <div className="w-full flex flex-row ">
+            <div className="w-full flex items-center justify-stat gap-4 flex-row ">
+              <h2 className="text-[#171717]"> Our Services</h2>
+              <hr className="h-[1px] border-top border-black/25 w-1/2" />
+            </div>
+            <div className="w-full flex justify-end items-center">
+              <p className=" text-[#171717] w-[65%] text-right leading-6 tracking-tight">
+                We helped nearly 90 clients in 2021, and closed 28.5 million in
+                sales!  Our team works hard everyday to grow and lear
+              </p>
+            </div>
+          </div>
+
+          {/* CONTENT */}
+
+          <div className="w-full flex flex-col gap-4">
+            <div className="w-full flex flex-row">
+              <Image
+                src={img4}
+                alt="Service 1"
+                className="w-full max-h-[400px]"
+              />
+
+              <div className="w-full flex flex-col gap-2 p-6 items-start justify-center">
+                <h3>Commercial & Residential</h3>
+                <p className=" text-[#171717] w-[65%] text-left leading-6 tracking-tight">
+                  We helped nearly 90 clients in 2021, and closed 28.5 million
+                  in sales!  Our team works hard everyday to grow and lear
+                </p>
+                <hr className="h-[1px] border-top border-black/25 w-full mb-6" />
+
+                <div className="w-full flex flex-row gap-4">
+                  <div className="w-full flex flex-col gap-4">
+                    <i className="bx bx-home-alt text-xl"></i>
+                    <h5>Commercial & Residential</h5>
+                    <p className=" text-[#171717] w-full text-left leading-6 tracking-tight">
+                      We helped nearly 90 clients in 2021, and closed 28.5
+                      million in sales!  Our team works hard everyday to grow
+                      and lear
+                    </p>
+                  </div>
+
+                  <div className="w-full flex flex-col gap-4">
+                    <i className="bx bx-home-alt text-xl"></i>
+                    <h5>Commercial & Residential</h5>
+                    <p className=" text-[#171717] w-full text-left leading-6 tracking-tight">
+                      We helped nearly 90 clients in 2021, and closed 28.5
+                      million in sales!  Our team works hard everyday to grow
+                      and lear
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

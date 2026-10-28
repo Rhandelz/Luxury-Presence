@@ -1,6 +1,7 @@
 import { Source_Sans_3, Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
+import "boxicons/css/boxicons.min.css";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
