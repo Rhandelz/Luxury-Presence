@@ -42,30 +42,14 @@ h5,
 h6 {
   font-family: var(--font-cinzel), serif;
 }
+h1 { font-size: clamp(32px, 5vw + 12px, 48px); }
+h2 { font-size: clamp(28px, 4vw + 12px, 40px); }
+h3 { font-size: clamp(24px, 3vw + 10px, 32px); }
+h4 { font-size: clamp(20px, 2vw + 12px, 24px); }
+h5 { font-size: clamp(18px, 1.5vw + 12px, 20px); }
+p  { font-size: clamp(15px, 0.5vw + 13px, 16px); }
 
-h1 {
-  font-size: 48px;
-}
-h2 {
-  font-size: 40px;
-}
-h3 {
-  font-size: 32px;
-}
-h4 {
-  font-size: 24px;
-}
-h5 {
-  font-size: 20px;
-}
-p {
-  font-size: 16px;
-}
-
-.tag {
-  font-size: 12px;
-}
-
+.tag { font-size: clamp(11px, 0.4vw + 9px, 12px); }
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

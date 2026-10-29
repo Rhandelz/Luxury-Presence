@@ -26,6 +26,9 @@ export const metadata = {
   title: "Marc Metzger | Pahrump Realtor",
   description:
     "Find your place in Pahrump with Marc Metzger of The Ridge Realty Group.",
+     icons: {
+    icon: "/Mask group.svg"
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +37,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${sourceSans.variable} ${cinzel.variable} ${inter.variable}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col ">
         <Nav />
         {children}
         <Footer />

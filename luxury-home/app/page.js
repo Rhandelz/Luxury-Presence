@@ -141,13 +141,12 @@ export default function Home() {
     <div className="flex flex-col ">
       {/* HERO SECTION  */}
       <div
-        className={`h-screen w-full  bg-contain bg-bottom relative flex flex-col items-center justify-center`}
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className={`h-screen w-full px-4 bg-contain bg-bottom relative flex flex-col items-center justify-center`}
       >
         <Image
           src={heroImage}
           alt="Hero Image"
-          className="absolute inset-0 w-full h-full object-cover object-bottom"
+          className="absolute inset-0 w-full h-full object-cover object-bottom left-0 right-0 "
         />
         <main className="relative z-10 mx-auto flex w-full flex-col items-center px-5 gap-5  text-center text-white">
           <p className="text-[9px] font-medium uppercase tracking-[0.12em]">
@@ -231,49 +230,48 @@ export default function Home() {
       </div>
 
       {/* ABOUT SECTION  */}
-      <div className="w-full flex flex-row items-center justify-center  relative ">
-        <div className="w-full flex flex-row items-center justify-center max-w-[1440px] relative mx-auto  x-2 sm:px-10 pt-16">
+      <div className="w-full px-4 flex flex-row items-center justify-center  relative max-md:overflow-hidden ">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center max-w-[1440px] relative mx-auto  x-2 sm:px-10 pt-16">
           <div className="w-full flex flex-col gap-4 items-center justify-start text-left  mb-12  ">
-            <div className="  w-[70%] flex flex-col gap-4 items-start ">
+            <div className="  w-[70%] max-md:w-full max-md:items-center flex flex-col gap-4 items-start ">
               <h2 className=" ">MARCI METZGER</h2>
-              <p className=" text-gray-600 text-[16px] leading-6 tracking-tight">
+              <p className=" text-gray-600 text-[16px] leading-6 tracking-tight max-md:text-center">
                 We helped nearly 90 clients in 2021, and closed 28.5 million in
                 sales!  Our team works hard everyday to grow and lear
               </p>
               <button className="  bg-[#171717] px-6 py-2 italic font-medium text-white transition-colors hover:bg-slate-700">
-                <i className="fa-solid fa-phone "></i> 206-919-6886
+                <i className="bx bx-phone mr-2"></i> 206-919-6886
               </button>
             </div>
           </div>
-          <Image src={marci} alt="Marci Metzger" className="w-full h-auto " />
+          <Image src={marci} alt="Marci Metzger" className="w-full h-auto max-md:scale-140 " />
         </div>{" "}
         <Image
           src={vector}
           alt="Vector"
-          className="w-screen h-auto absolute bottom-0 max-h-[110px] min-h-[100px]"
+          className="w-screen h-auto absolute bottom-0 max-h-[110px] min-h-[100px] max-md:hidden"
         />
       </div>
 
       {/* SOLD SECTION  */}
-      <div className="w-full  bg-[#171717] py-16">
+      <div className="w-full px-4  bg-[#171717] py-16">
         <div className="w-full flex flex-col gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
           {/* TITLE */}
-          <div className="w-full flex flex-row ">
+          <div className="w-full flex flex-row max-md:flex-col">
             <div className="w-full flex items-center justify-stat gap-4 flex-row ">
-              <h2 className="text-white"> GET IT SOLD</h2>
+              <h2 className="text-white max-md:whitespace-nowrap"> GET IT SOLD</h2>
               <hr className="h-[1px] border-top border-white/25 w-1/2" />
             </div>
             <div className="w-full flex justify-end items-center">
-              <p className=" text-white w-[65%] text-right leading-6 tracking-tight">
-                We helped nearly 90 clients in 2021, and closed 28.5 million in
-                sales!  Our team works hard everyday to grow and lear
+              <p className=" text-white w-[65%] text-right leading-6 tracking-tight max-md:w-full max-md:text-left">
+            Selling your home takes more than a sign in the yard. We pair local market knowledge with proven marketing so your listing reaches the right buyers and sells for top dollar.
               </p>
             </div>
           </div>
 
           {/* CONTENT */}
 
-          <div className="w-full flex flex-row gap-4">
+          <div className="w-full flex flex-row gap-4 max-md:flex-col">
             {cards.map((card) => (
               <ImageCard
                 key={card.id}
@@ -287,18 +285,19 @@ export default function Home() {
       </div>
 
       {/* SERVICE SECTION  */}
-      <div className="w-full py-16">
+      <div className="w-full px-4 py-16">
         <div className="w-full flex flex-col gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
           {/* TITLE */}
-          <div className="w-full flex flex-row ">
+          <div className="w-full flex flex-row max-md:flex-col">
             <div className="w-full flex items-center justify-stat gap-4 flex-row ">
-              <h2 className="text-[#171717]"> Our Services</h2>
+              <h2 className="text-[#171717] max-md:whitespace-nowrap"> Our Services</h2>
               <hr className="h-[1px] border-top border-black/25 w-1/2" />
             </div>
-            <div className="w-full flex justify-end items-center">
+            <div className="w-full flex justify-end items-center max-md:text-left">
               <p className=" text-[#171717] w-[65%] text-right leading-6 tracking-tight">
-                We helped nearly 90 clients in 2021, and closed 28.5 million in
-                sales!  Our team works hard everyday to grow and lear
+           Whether you're buying, selling, or investing, our team guides you through
+  every step. We live and work in this community, and we're here to make your
+  move simple and stress-free.
               </p>
             </div>
           </div>
@@ -319,8 +318,8 @@ export default function Home() {
       </div>
 
       {/* GALLERY SECTION  */}
-      <div className="w-full  bg-[#171717] py-16">
-        <div className="w-full flex flex-row gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
+      <div className="w-full  bg-[#171717] px-4 py-16">
+        <div className="w-full flex flex-row gap-6 items-center justify-start max-w-[1440px] relative mx-auto max-md:flex-col">
           {/* TITLE */}
           <div className="w-full flex flex-col justify-center items-center gap-6 h-[3 0vh]  ">
             <div className="w-full flex items-center justify-center gap-4 flex-row ">
@@ -332,8 +331,9 @@ export default function Home() {
               <hr className="h-[1px] border-top border-white/25 w-full" />
             </div>
             <p className=" text-white w-[65%] text-center leading-6 tracking-tight">
-              We helped nearly 90 clients in 2021, and closed 28.5 million in
-              sales!  Our team works hard everyday to grow and lear
+     Take a look at a few of the homes and views that make Pahrump special.
+  From quiet desert streets to mountain backdrops, find a place that feels
+  like yours.        
             </p>
 
             <div className="w-[70%] flex justify-between items-center ">
@@ -387,7 +387,8 @@ export default function Home() {
 
           {/* <div className="w-full flex flex-row gap-4"></div> */}
           <div
-            className="w-full pl-6 lg:pl-0 pr-[10%] lg:pr-[6%]"
+            className="w-full pl-6 lg:pl-0 pr-[10%] lg:pr-[6% overflow-hidden
+            "
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
@@ -412,9 +413,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* GALLERY SECTION  */}
-      <div className="w-full   py-16">
-        <div className="w-full flex flex-row gap-6 items-center justify-start max-w-[1440px] relative mx-auto ">
+      {/* CONTACT SECTION  */}
+      <div className="w-full px-4   py-16">
+        <div className="w-full flex flex-row gap-6 items-center justify-start max-w-[1440px] relative mx-auto max-md:flex-col">
           {/* TITLE */}
           <div className="w-full flex flex-col justify-center items-start gap-6 h-[3 0vh]  ">
             <div className="w-full flex items-center justify-start gap-4 flex-row ">
@@ -444,7 +445,7 @@ export default function Home() {
               />
             </div>
             <button className="  bg-[#171717] px-6 py-2 text-[12px] italic font-medium text-white transition-colors hover:bg-slate-700">
-              206-919-6886
+            <i className="bx bx-phone mr-2"/>  206-919-6886
             </button>
           </div>
 
